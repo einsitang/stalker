@@ -13,45 +13,47 @@ python version >=3.8 with ML package(ultralytics,pytorch) including opencv , mov
 
 clone and enter this repository
 
-```
+```bash
 git clone https://github.com/einsitang/stalker.git
 cd stalker
 ```
 
 use venv to create python virtual env in python3(>=3.8) :
 
-```python
+```bash
 python3 -m venv venv
+source venv/bin/activate
 ```
 
 pip install the requirements
 
-```python
-pip install -r requirements
+```bash
+pip install -r requirements.txt
 ```
 
 ## usage
 
 use python command:
-```
+```bash
 python stalker.py -i video_file_path -o video_track_worked_path
 ```
 
 example:
-```
+```bash
 python stalker.py -i ~/Downloads/IMG_1120.MOV -o ~/Downloads/test5.mp4
 ```
 
-the first run this script may take few time,because yolo will download yolo model
+you can also use `python stalker.py -h` to know all arguments instructions
 
-only happens on the first run
+> the first run this script may take few time,because yolo will download yolo model
+> only happens on the first run
 
 # effect
 
-> origin video :
+*origin video :*
 
 ![before](img/before.gif)
 
-> after stalker :
+*after stalker :*
 
 ![after](img/after.gif)
